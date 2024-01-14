@@ -4,6 +4,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       charset: 'utf-8',
+      title: 'Vanres',
       viewport: 'width=device-width, initial-scale=1',
     }
   },
@@ -15,9 +16,16 @@ export default defineNuxtConfig({
   },
   modules: [
     '@pinia/nuxt',
+    'nuxt-svgo'
   ],
-  ssr: true,
+  ssr: false,
   pinia: {
     storesDirs: ['./stores/**', './custom-folder/stores/**'],
   },
+  svgo: {
+    autoImportPath: '~/assets/icons/'
+  },
+  runtimeConfig: {
+    baseURL: import.meta.env.VITE_BASE_URL
+  }
 })
