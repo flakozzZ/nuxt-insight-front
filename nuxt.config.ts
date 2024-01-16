@@ -16,15 +16,15 @@ export default defineNuxtConfig({
   },
   modules: [
     '@pinia/nuxt',
-    'nuxt-svgo'
+    // 'nuxt-svgo',
   ],
   ssr: false,
   pinia: {
     storesDirs: ['./stores/**', './custom-folder/stores/**'],
   },
-  svgo: {
-    autoImportPath: '~/assets/icons/'
-  },
+  // svgo: {
+  //   autoImportPath: '~/assets/icons/'
+  // },
   runtimeConfig: {
     baseURL: import.meta.env.VITE_BASE_URL
   }

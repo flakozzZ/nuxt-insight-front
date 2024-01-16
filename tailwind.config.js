@@ -20,6 +20,7 @@ export default {
       },
       colors: {
         'a-side': '#C3C1C13D',
+        'surface-300': '#E0E0E0'
 
       }
     },

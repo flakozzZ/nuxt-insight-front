@@ -4,8 +4,8 @@
 
 <template>
   <div>
-    <v-header />
-    <v-side />
+    <ui-v-header />
+    <ui-v-side />
 
     <div class="p-4 sm:ml-64">
       <div class="p-4 mt-14">
@@ -18,3 +18,5 @@
 <style scoped>
 
 </style>
+
+

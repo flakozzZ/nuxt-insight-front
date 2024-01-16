@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  Courses
+  Manager
 </template>
 
 <style scoped>

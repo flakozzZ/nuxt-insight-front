@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  Courses
+teacher
 </template>
 
 <style scoped>

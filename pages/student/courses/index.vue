@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  Courses
+student
 </template>
 
 <style scoped>

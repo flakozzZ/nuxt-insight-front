@@ -7,11 +7,11 @@ export default {
 <template>
   <div class="field">
     <input
-        :type="props.type"
-        :value="props.modelValue"
-        :placeholder="props.placeholder"
+        :type="type"
+        :placeholder="placeholder"
         autocomplete="new-password"
         :disabled="disabled"
+        v-model.trim="model"
         class="field__input">
   </div>
 </template>
@@ -21,18 +21,22 @@ export default {
 interface Props {
   type: 'text' | 'password' | 'email' | 'url'
   placeholder: string
-  modelValue?: string | number
   disabled?: boolean
   autocomplete?: boolean
 }
 
-defineEmits<{
+ defineEmits<{
   (e: 'update:modelValue', value: string): void
 }>()
 
-const props = withDefaults(defineProps<Props>(), {
+withDefaults(defineProps<Props>(), {
   autocomplete: true
 })
+
+
+const model = defineModel()
+
+
 </script>
 
 <style scoped src="./index.scss">
