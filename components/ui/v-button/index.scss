@@ -38,9 +38,24 @@
     width: 100%;
   }
   &--primary {
-    background: #566DF6;
+    background: #0072FF;
     color: #FFFFFF;
-    box-shadow: 0px 4px 19px 0px #7793414D;
+    &:hover {
+      background: #076EEE;
+    }
+  }
+
+  &--secondary {
+    background: none;
+    //--tw-border-opacity: 1;
+    //border: 1px solid rgb(75 85 99/var(--tw-border-opacity));
+    //--tw-text-opacity: 1;
+    color: rgb(156 163 175);
+    border: 1px solid rgb(75 85 99);
+    &:hover {
+      background-color: rgb(55 65 81);
+      color: rgb(255 255 255);
+    }
   }
 
 }

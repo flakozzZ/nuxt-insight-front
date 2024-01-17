@@ -60,20 +60,64 @@ watch(user, (newValue) => {
 </script>
 
 <template>
-  <div class="login__item">
-    <label for="email">Email</label>
-    <ui-v-input v-model="email" class="my-2" placeholder="Email" type="email" />
-    <label for="password">Password</label>
-    <ui-v-input v-model="password" class="my-2" placeholder="Enter a password" type="password" />
-    <ui-v-button @click="authorize" class="mt-4" type="primary" size="lg" full-width>Войти</ui-v-button>
+  <div class="flex justify-between max-w-screen-xl mx-auto px-1 gap-x-14 pt-2 md:px-16 md:pt-52 ">
+    <div class="w-1/2 hidden md:block">
+      <h1 class="mb-6 text-3xl font-bold">Vanres</h1>
+      <div class="mb-6">
+        <h2 class="text-xl mb-0.5 font-bold">Lorem ipsum</h2>
+        <p class="text-sm text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+      <div class="mb-6">
+        <h2 class="text-xl mb-0.5 font-bold">Lorem ipsum</h2>
+        <p class="text-sm text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+      <div class="mb-6">
+        <h2 class="text-xl mb-0.5 font-bold">Lorem ipsum</h2>
+        <p class="text-sm text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </div>
+    <div class="w-full md:w-1/2 bg-gray-800 h-full rounded-lg">
+      <div class="p-8 mx-auto">
+        <h1 class="font-bold text-2xl mb-5">Welcome back</h1>
+        <div class="flex justify-between gap-4 flex-col md:flex-row">
+        <ui-v-button type="secondary" full-width size="lg">Edu</ui-v-button>
+        <ui-v-button type="secondary" full-width size="lg">Test</ui-v-button>
+        </div>
+
+        <div class="mt-12">
+          <div>
+            <label class="text-sm font-bold mx-2" for="email">Email</label>
+            <ui-v-input v-model="email" class="mt-2" type="email" placeholder="Email" />
+          </div>
+          <div class="mt-4">
+            <label class="text-sm font-bold mx-2" for="password">Password</label>
+            <ui-v-input v-model="password" class="mt-2" type="password" placeholder="Password" />
+          </div>
+        </div>
+        <div class="flex justify-between mt-6">
+          <div class="flex gap-2">
+            <input type="checkbox">
+            <div>Remember me</div>
+          </div>
+          <NuxtLink class="text-blue-700 font-semibold">
+            Forgot password?
+          </NuxtLink>
+        </div>
+          <div class="mt-6">
+            <ui-v-button @click="authorize" type="primary" size="lg" full-width>Sign in to your account</ui-v-button>
+          </div>
+        <div class="flex mt-6 text-sm gap-2">
+          <p>Don't have an account yet?</p>
+          <NuxtLink class="text-blue-700 font-semibold">
+            Sign up here
+          </NuxtLink>
+        </div>
+      </div>
+    </div>
   </div>
+
 </template>
 
 <style scoped lang="scss">
-  .login__item {
-    width: 100%;
-    max-width: 360px;
-    margin: 0 auto;
-    padding-top: 300px;
-  }
+
 </style>

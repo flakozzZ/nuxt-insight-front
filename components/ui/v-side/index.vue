@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import {useUserStore} from "~/middleware/user";
-import {defineAsyncComponent} from "vue";
 
 const ADMIN_MENU_ITEMS = [
   {label: 'Добавить менеджера', icon: 'add_user', routeName: ''},
@@ -63,30 +62,49 @@ const logout = () => {
   LOGOUT_USER()
   router.push('/')
 }
-
 </script>
 
 <template>
-  <aside
-      class="fixed top-0 left-0 right-0 w-253px h-screen bg-a-side pt-24 transition-transform -translate-x-full sm:translate-x-0">
-    <NuxtLink
-        v-for="item in menu_items"
-        :key="item.icon"
-        :to="{name: item.routeName}"
-    >
+<!--  <aside-->
+<!--      class="fixed top-0 left-0 right-0 w-253px h-screen bg-a-side pt-24 transition-transform -translate-x-full sm:translate-x-0">-->
+<!--    <NuxtLink-->
+<!--        v-for="item in menu_items"-->
+<!--        :key="item.icon"-->
+<!--        :to="{name: item.routeName}"-->
+<!--    >-->
 
-      <div class="flex px-3 py-4 w-253px gap-x-4 hover:bg-surface-300 transition-all">
-        <div>
-          <img :src="`/_nuxt/assets/icons/${item.icon}.svg`" alt="icon" width="24" height="24">
-        </div>
-        <div class="">{{ item.label }}</div>
-      </div>
+<!--      <div class="flex px-3 py-4 w-253px gap-x-4 hover:bg-surface-300 transition-all">-->
+<!--        <div>-->
+<!--          <img :src="`/_nuxt/assets/icons/${item.icon}.svg`" alt="icon" width="24" height="24">-->
+<!--        </div>-->
+<!--        <div class="">{{ item.label }}</div>-->
+<!--      </div>-->
 
 
-    </NuxtLink>
+<!--    </NuxtLink>-->
 
-    <ui-v-button @click="logout" type="primary" size="lg">Logout</ui-v-button>
+<!--    <ui-v-button @click="logout" type="primary" size="lg">Logout</ui-v-button>-->
 
+<!--  </aside>-->
+
+  <aside id="logo-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700" aria-label="Sidebar">
+    <div class="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
+      <ul class="space-y-2 font-medium">
+        <NuxtLink
+          v-for="item in menu_items"
+          :key="item.icon"
+          :to="{name: item.routeName}"
+          >
+          <div class="flex gap-2 items-center px-2 py-4 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+            <div>
+<!--              <img style="fill: white !important;" :src="`/_nuxt/assets/icons/${item.icon}.svg`" :alt="item.icon" width="24" height="24">-->
+              <nuxt-icon :name="`sidebar/${item.icon}`" />
+            </div>
+            <div>{{item.label}}</div>
+          </div>
+        </NuxtLink>
+      </ul>
+    </div>
   </aside>
 </template>
 

@@ -1,8 +1,9 @@
 <template>
-  <nuxt-layout>
-    <nuxt-page />
-  </nuxt-layout>
-
+  <div class="w-full h-screen bg-red">
+    <nuxt-layout>
+      <nuxt-page />
+    </nuxt-layout>
+  </div>
 </template>
 <script setup lang="ts">
 

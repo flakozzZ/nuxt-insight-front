@@ -1,3 +1,4 @@
+
 export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ['~/assets/css/main.css'],
@@ -16,6 +17,7 @@ export default defineNuxtConfig({
   },
   modules: [
     '@pinia/nuxt',
+      'nuxt-icons'
     // 'nuxt-svgo',
   ],
   ssr: false,
@@ -27,5 +29,6 @@ export default defineNuxtConfig({
   // },
   runtimeConfig: {
     baseURL: import.meta.env.VITE_BASE_URL
-  }
+  },
+
 })
